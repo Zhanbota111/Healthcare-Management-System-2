@@ -3,11 +3,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    private static final String URL = "jdbc:postgresql://localhost:5432/healthcare_db";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "password"; // өз пароліңді жаз
+    public static void main(String[] args) {
+        String url = "jdbc:postgresql://localhost:5432/your_database_name";
+        String user = "your_username";
+        String password = "your_password";
 
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the database!");
+            connection.close();
+        } catch (SQLException e) {
+            System.out.println("Connection failed!");
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("JDBC Driver not found!");
+            e.printStackTrace();
+        }
     }
 }
