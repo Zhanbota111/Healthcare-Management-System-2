@@ -39,7 +39,6 @@ document.getElementById('patientForm').addEventListener('submit', async (e) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(patientData)
     });
-
     if (response.ok) {
         document.getElementById('patientForm').reset();
         setTimeout(loadPatients, 500);

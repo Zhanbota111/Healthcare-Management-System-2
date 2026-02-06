@@ -39,7 +39,6 @@ public class Main {
             }
         } catch (SQLException e) {
             System.err.println("Database error: " + e.getMessage());
-            // Дополнительная диагностика: попробуем подключиться к 'postgres' и вывести список БД
             System.out.println("\n--- Diagnostic: Checking available databases ---");
             try (Connection conn = DBConnection.getConnection("postgres", "postgres", "0000")) {
                 System.out.println("Connected to 'postgres' database successfully.");

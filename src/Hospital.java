@@ -31,7 +31,6 @@ public class Hospital {
         }
         System.out.println("Patient not found.");
     }
-
     public void addMedicalProfessional(MedicalProfessional professional) {
         medicalProfessionals.add(professional);
     }

@@ -10,7 +10,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/hospitals")
 public class HospitalController {
-
     @Autowired
     private HospitalRepository hospitalRepository;
 

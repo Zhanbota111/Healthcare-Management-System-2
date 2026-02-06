@@ -13,7 +13,6 @@ import java.util.Map;
 @RequestMapping("/api/patients")
 @CrossOrigin(origins = "*")
 public class PatientController {
-
     @Autowired
     private PatientRepository patientRepository;
 

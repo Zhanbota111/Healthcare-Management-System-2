@@ -16,7 +16,6 @@ public class Patient {
 
     @Column(name = "last_name")
     private String lastName;
-
     private LocalDate dob;
     private String condition;
 
