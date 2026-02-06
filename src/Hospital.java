@@ -36,28 +36,15 @@ public class Hospital {
         medicalProfessionals.add(professional);
     }
 
-    public void removeProfessional(int id) {
-        medicalProfessionals.removeIf(professional -> professional.getId() == id);
-    }
-
     public void displayInfo() {
         System.out.println("Hospital: " + name);
-        System.out.println("\nPatients:");
-        if (patients.isEmpty()) {
-            System.out.println("No patients in the hospital.");
-        } else {
-            for (Patient patient : patients) {
-                patient.displayInfo();
-            }
+        System.out.println("Patients:");
+        for (Patient patient : patients) {
+            patient.displayInfo();
         }
-
-        System.out.println("\nMedical Professionals:");
-        if (medicalProfessionals.isEmpty()) {
-            System.out.println("No medical professionals in the hospital.");
-        } else {
-            for (MedicalProfessional professional : medicalProfessionals) {
-                professional.displayInfo();
-            }
+        System.out.println("Medical Professionals:");
+        for (MedicalProfessional professional : medicalProfessionals) {
+            professional.displayInfo();
         }
     }
 }

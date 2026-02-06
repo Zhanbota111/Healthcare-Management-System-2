@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Healthcare Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Healthcare Management Panel</h1>
+
+    <div class="card">
+        <h3>Patient Registration</h3>
+        <form id="patientForm">
+            <div class="form-row">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="number" id="hospitalId" placeholder="Hospital ID" required>
+            </div>
+            <div class="form-row" style="margin-top: 10px;">
+                <input type="date" id="dob" required title="Date of Birth">
+                <input type="text" id="condition" placeholder="Medical Condition (e.g. flu)" required>
+            </div>
+            <button type="submit" class="save-btn" style="margin-top: 15px;">Save Patient</button>
+        </form>
+    </div>
+
+    <table id="patientsTable">
+        <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor</th>
+            <th>Hospital</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
